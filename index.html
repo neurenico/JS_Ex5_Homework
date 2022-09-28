@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS_Ex5_Homework</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Bank's products</title>
 </head>
-<body style="background: rgb(228, 205, 177)">
-    <h1 style="font-style: italic; font-size: 90px; text-align: center">JS_Ex5_Homework</h1>
-    <script src="./script.js"></script>
+<body>
+    <div class="site">
+        <div class="bankside container">
+            <div class="bankside__input-wrapper input-wrapper">
+                <div class="bankside__input input">
+                    <form action="" class="bankside__form form">
+                        <h3 class="bankside__title title">Create product</h3>
+                        <div class="bankside__input-box input-box">
+                            <label for="bankside-name">Name of product</label>
+                            <input type="text" class="bankside__input-name" id="bankside-name" placeholder="name" required>
+                            <label for="bankside-percent">Base percentage</label>
+                            <input type="number" class="bankside__input-percent" id="bankside-percent" placeholder="percent" required>
+                            <label for="bankside-capitalization">Term of capitalization</label>
+                            <input type="number" class="bankside__input-capitalization" id="bankside-capitalization" placeholder="term" required>
+                            <button class="bankside__btn btn" type="button">Put product</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="bankside__list list">
+            </div>
+        </div>
+
+        <div class="customer container">
+            <div class="customer__input-wrapper input-wrapper">
+                <div class="customer__input input">
+                    <form action="" class="customer__form form">
+                        <h3 class="customer__title title">Сhoose product</h3>
+                        <div class="customer__input-box input-box">
+                            <label for="customer-name">Name of deposit</label>
+                            <select type="text" class="customer__input-name" id="customer-name">
+                            </select>
+                            <label for="customer-summ">Summ, you want to deposit</label>
+                            <input type="number" class="customer__input-summ" id="customer-summ" placeholder="summ">
+                            <label for="customer-term">Term for which you want to put</label>
+                            <input type="number" class="customer__input-term" id="customer-term" placeholder="term">
+                            <button class="customer__btn btn" type="button">Calculate deposit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="customer__list list">
+            </div>
+        </div>
+    </div>
+    <script src="./script2.js"></script>
 </body>
 </html>

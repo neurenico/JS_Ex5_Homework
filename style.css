@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.site {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(178, 195, 208);
+}
+
+.container {
+    background-color: rgb(237, 232, 232);
+    margin: .5em;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+}
+
+.input-wrapper {
+    width: 300px;
+    height: 285px;
+    background-color: rgb(215, 192, 192);
+    border-radius: 5px;
+    padding: .5em .5em 1em;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input {
+    margin-bottom: 1em;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+select {
+    margin-bottom: 1em;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.btn {
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+.list {
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .5em;
+    grid-auto-flow: row;
+}
+
+.item {
+    background-color: rgb(215, 192, 192);
+    border-radius: 5px;
+    padding: .5em;
+    height: 285px;
+}
+
+.bankside__item {
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.customer__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
+
+
