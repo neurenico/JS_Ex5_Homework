@@ -34,7 +34,7 @@ class BankProducts {
     }
 
     contentOfProduct(name, percent, capitalizationTerm) {
-        let content = `<p>Name of depodit: ${name};</p><p>Percent of deposit: ${percent} %;</p><p>Capitalization term: ${capitalizationTerm} month(s)</p>`;
+        let content = `<p>Name of depodit: ${name}</p><p>Percent of deposit: ${percent} %</p><p>Capitalization term: ${capitalizationTerm} month(s)</p>`;
         let contentForCustomer = `${name}`;
         if (name && percent && capitalizationTerm) {
             this.createProduct(content);
@@ -79,16 +79,16 @@ class BankProducts {
         let customerInfo = this.getInfoOfDeposit();
         for (let i = 0; i < arr.length; i++) {
             if (customerInfo.name === arr[i].name) {
-                let earnedPercent = (customerInfo.summ * arr[i].percent * customerInfo.term) / (arr[i].capitalizationTerm * 100);
-                let finalAmount = earnedPercent + Number(customerInfo.summ);
+                let finalAmount = (customerInfo.summ * Math.pow((1 + (arr[i].percent * arr[i].capitalizationTerm / (100 * 12))), customerInfo.term / arr[i].capitalizationTerm)).toFixed(2);
+                let earnedPercent = (finalAmount - customerInfo.summ).toFixed(2);
                 if (customerInfo.summ && customerInfo.term) {
                     this.putCustomerProduct(
-                        `<p>Name of depodit: ${arr[i].name};</p>
-                        <p>Initial deposit amount: ${customerInfo.summ} $;</p>
-                        <p>Term: ${customerInfo.term} month(s);</p>
-                        <p>Earned percent: ${earnedPercent} $;</p> 
+                        `<p>Name of depodit: ${arr[i].name}</p>
+                        <p>Initial deposit amount: ${customerInfo.summ} $</p>
+                        <p>Term: ${customerInfo.term} month(s)</p>
+                        <p>Earned percent: ${earnedPercent} $</p> 
                         </p>
-                        <p>Final amount: ${finalAmount} $;</p>`
+                        <p>Final amount: ${finalAmount} $</p>`
                     );
                 } else {
                     if (!customerInfo.summ) {
